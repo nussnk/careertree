@@ -1,0 +1,7 @@
+name = Nuss block module.
+description = Nuss block module.
+package = Test Modules
+core=7.x
+version = "7.x-1.x-dev"
+project = "nuss_block"
+datestamp = "1507573190"

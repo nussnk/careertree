@@ -1,0 +1,88 @@
+<?php
+function nuss_block_block_info() {
+  $blocks = array();
+  $blocks['frontpage_filters'] = array(
+    'info' => t('Frontpage Filters Block'),
+  );
+  return $blocks;
+}
+
+function nuss_block_block_view($delta = '') {
+  $block = array();
+  if ($delta == 'frontpage_filters') {
+      $block['subject'] = t('Find Your Dream Job Here');
+      $block['content'] = drupal_get_form('nuss_block_form');
+  }
+  return $block;
+}
+
+function nuss_block_form($form, &$form_state) {
+	$options = taxonomy_options_array('category');	
+	$form=array();
+	$form['location'] = array(
+		'#type' 	=> 'select',
+		'#title' 	=> 'choose location',
+		'#options'	=> array(
+					0 => 'Choose a Category',
+					1 => 'Famagusta',
+					2 => 'Larnaca',
+					3 => 'Limassol',
+					4 => 'Nicosia',
+					5 => 'Pafos',
+				),
+	); 
+	$form['category'] = array(
+		'#type' 	=> 'select',
+		'#title' 	=> 'choose category',
+		'#options'	=> $options,
+		'#default_value'=> t('All'),
+	); 
+	$form['submit'] = array(
+		'#type'		=> 'submit',
+		'#value'	=> t('search')
+	);
+	return $form;                                             
+}
+
+function nuss_block_form_submit($form, &$form_state) {
+	$var1 = $form_state['values']['location'];
+	$var2 = $form_state['values']['category'];
+	if ($var1 == 0) {
+		$var1 = 'All';
+		$mykey1 = 'field_location_value';
+	}
+	else {
+		$var1 = $var1 - 1;
+		$mykey1 = 'field_location_value[]';
+	}
+	if ($var2 == 0) {
+		$var2 = 'All';
+		$mykey2 = 'field_category_tid';
+	}
+	else {
+		$var2 = $var2 - 1;
+		$mykey2 = 'field_category_tid[]';
+	}
+	
+	$form_state['redirect'] = array(
+  		'vacancies',
+  		array(
+    			'query' => array(
+      				$mykey1 => $var1,
+				$mykey2 => $var2,
+    			),
+  		),
+	);
+	return $form;
+
+}
+
+function taxonomy_options_array($machine_name) {
+	$var = taxonomy_vocabulary_machine_name_load($machine_name);
+	$terms = taxonomy_get_tree($var->vid);
+	$options[0] = "Choose Category";
+	foreach ($terms as $term) {
+		$options[$term->tid+1] = $term->name;
+	}
+	return $options;
+}

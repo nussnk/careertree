@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo|PT+Sans|FontAwesome');
+
+/* ======================= main sizes ==========================*/
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -20,15 +23,48 @@
   }
 }
 
-
-#block-user-login {
-    width: 30%;
-display: block;
-float: left;
+/* ======================= main css ===================== */
+body{
+	font-family: "PT Sans", serif;
 }
 
 
-#block-views-vacancies-block-1 {
- float: right;
-width: 70%;
+/* ======================= nav bar ====================== */
+/* ----------------------- secondary -------------------- */
+.container-fluid.secondary {
+	background: white;
+}
+
+.container-fluid.secondary .navbar-header {
+	position: absolute;
+}
+
+.container-fluid.secondary .container .navbar-collapse > nav > ul > li > a {
+	padding: 5px 15px;
+	text-transform: uppercase;
+	color: #804100;
+	font-weight: 600;
+}
+
+/*.container-fluid.secondary .container .navbar-collapse > nav > ul > li > a:before {
+  content: "\f010"; 
+  font-weight: normal;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: inherit;
+  padding-right: 5px;
+}*/
+
+/* ---------------------- main menu --------------------- */
+.container-fluid.primary {
+	background-color: rgba(85, 186, 19, 0.9);
+}
+
+.container-fluid.primary .container .navbar-collapse{
+	float: right;
+	padding-right: 0;
+}
+
+.container-fluid.primary .container .navbar-collapse > nav > ul > li > a {
+	padding: 5px 15px;
 }
