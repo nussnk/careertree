@@ -132,8 +132,7 @@
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
-
+  </header>
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo|PT+Sans|FontAwesome');
-
+@import url("font-awesome.css");
 /* ======================= main sizes ==========================*/
 .container {
   margin-right: auto;
@@ -26,10 +26,19 @@
 /* ======================= main css ===================== */
 body{
 	font-family: "PT Sans", serif;
+	background: url(../img/main_bg.jpg);
+	background-position:center top;
+	background-repeat: no-repeat;
+	background-size: auto;
 }
 
 
 /* ======================= nav bar ====================== */
+
+.navbar {
+	background: none;
+	border: none;
+}
 /* ----------------------- secondary -------------------- */
 .container-fluid.secondary {
 	background: white;
@@ -39,25 +48,26 @@ body{
 	position: absolute;
 }
 
+.container-fluid.secondary .container .navbar-collapse > nav > ul > li.last > a {
+	padding-right: 0;
+}
 .container-fluid.secondary .container .navbar-collapse > nav > ul > li > a {
-	padding: 5px 15px;
+	padding: 10px 15px;
 	text-transform: uppercase;
 	color: #804100;
 	font-weight: 600;
+	font-family: "Arvo", serif;
 }
 
-/*.container-fluid.secondary .container .navbar-collapse > nav > ul > li > a:before {
-  content: "\f010"; 
-  font-weight: normal;
-  display: inline-block;
-  font-family: FontAwesome;
-  font-size: inherit;
-  padding-right: 5px;
-}*/
+.container-fluid.secondary .container .navbar-collapse > nav > ul > li > a:before {
+	margin-right: 0.5em;
+	color: #55ba13;
+	font-family: FontAwesome;
+}
 
 /* ---------------------- main menu --------------------- */
 .container-fluid.primary {
-	background-color: rgba(85, 186, 19, 0.9);
+	background-color: rgba(85, 186, 19, 0.95);
 }
 
 .container-fluid.primary .container .navbar-collapse{
@@ -65,6 +75,52 @@ body{
 	padding-right: 0;
 }
 
-.container-fluid.primary .container .navbar-collapse > nav > ul > li > a {
-	padding: 5px 15px;
+.container-fluid.primary .container .navbar-collapse > nav > ul > li.last > a {
+	padding-right: 0;
 }
+
+.container-fluid.primary .container .navbar-collapse > nav > ul > li > a {
+	padding: 10px 15px;
+	color: white;
+	font-family: "Arvo", serif;
+	font-size: 16px;
+}
+
+/* ========================= main content ======================= */
+.main-container {
+	margin-top: 100px;
+}
+/* ------------------------- frontpage -------------------------- */
+
+.front #block-user-login {
+	background-color:white;
+	width: 40%;
+	float: left;
+}
+
+.front #block-nuss-block-frontpage-filters {
+	background-color: rgba(85, 186, 19, 0.95);
+	width:58%;
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.not-front .main-container {
+	background-color: white;
+}
+
