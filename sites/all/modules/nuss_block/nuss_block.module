@@ -23,7 +23,7 @@ function nuss_block_form($form, &$form_state) {
 		'#type' 	=> 'select',
 		'#title' 	=> 'choose location',
 		'#options'	=> array(
-					0 => 'Choose a Category',
+					0 => 'Choose Location',
 					1 => 'Famagusta',
 					2 => 'Larnaca',
 					3 => 'Limassol',
@@ -39,7 +39,7 @@ function nuss_block_form($form, &$form_state) {
 	); 
 	$form['submit'] = array(
 		'#type'		=> 'submit',
-		'#value'	=> t('search')
+		'#value'	=> t('Search')
 	);
 	return $form;                                             
 }

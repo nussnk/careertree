@@ -23,6 +23,10 @@
   }
 }
 
+a, a:hover {
+	color: #40920a;
+}
+
 /* ======================= main css ===================== */
 body{
 	font-family: "PT Sans", serif;
@@ -30,8 +34,36 @@ body{
 	background-position:center top;
 	background-repeat: no-repeat;
 	background-size: auto;
+	font-size: 16px;
 }
 
+.not-front .main-container {
+	background-color: white;
+}
+
+.row > section > h1 {
+	font-family: 'Arvo', serif;
+	color: white;
+	margin-top: -1.3em;
+	text-transform: uppercase;
+	font-weight: 800;
+	border-bottom: none;
+}
+
+
+.button, .btn-primary, .form-submit{
+	color: #333333;
+	font-weight: 800;
+	background: linear-gradient(to bottom, white, #9bd078);
+	box-shadow: 0 2px 4px 0 #3c850d;
+	text-shadow: 0 1px 0 white;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+ol.breadcrumb {
+	display: none;
+}
 
 /* ======================= nav bar ====================== */
 
@@ -48,9 +80,6 @@ body{
 	position: absolute;
 }
 
-.container-fluid.secondary .container .navbar-collapse > nav > ul > li.last > a {
-	padding-right: 0;
-}
 .container-fluid.secondary .container .navbar-collapse > nav > ul > li > a {
 	padding: 10px 15px;
 	text-transform: uppercase;
@@ -75,8 +104,16 @@ body{
 	padding-right: 0;
 }
 
-.container-fluid.primary .container .navbar-collapse > nav > ul > li.last > a {
-	padding-right: 0;
+.container-fluid.primary .container .navbar-collapse > nav > ul > li {
+	border-right: 1px solid #40920a;
+}
+
+.container-fluid.primary .container .navbar-collapse > nav > ul > li.last {
+	border-right: none;
+}
+
+.container-fluid.primary .container .navbar-collapse > nav > ul > li.active > a {
+	background-color: rgb(85, 186, 19);
 }
 
 .container-fluid.primary .container .navbar-collapse > nav > ul > li > a {
@@ -88,39 +125,533 @@ body{
 
 /* ========================= main content ======================= */
 .main-container {
-	margin-top: 100px;
+	margin-top: 150px;
 }
 /* ------------------------- frontpage -------------------------- */
 
 .front #block-user-login {
-	background-color:white;
+	background-color: rgba(155, 208, 120, 0.95);
 	width: 40%;
 	float: left;
 }
 
-.front #block-nuss-block-frontpage-filters {
+.front #block-user-login > h2{
+	color: white;
+	margin-top: -1em;
+	font-weight: 800;
+	font-family: "Arvo", serif;
+}
+
+.front #block-user-login .my-form-wrapper {
+	margin: 20px;
+}
+
+.front #block-user-login .my-form-wrapper .form-actions {
+	float: left;
+}
+
+.front #block-user-login .my-form-wrapper .form-actions > button > span {
+	display: none;
+}
+
+
+.front #block-user-login .my-form-wrapper > ul {
+	margin-left: 60px;
+	margin-bottom: 0;
+	list-style: none;
+	font-size: 0.8em;
+	
+}
+
+.front #block-user-login .my-form-wrapper > ul > li > a {
+	color: #333;
+}
+
+/*---------------------------------- exposed filters --------------------------- */
+.front.not-logged-in #block-nuss-block-frontpage-filters {
 	background-color: rgba(85, 186, 19, 0.95);
 	width:58%;
 	float: right;
 }
 
+.front.logged-in #block-nuss-block-frontpage-filters {
+	background-color: rgba(85, 186, 19, 0.95);
+	width:80%;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
 
+.front #block-nuss-block-frontpage-filters > h2{
+	color: white;
+	margin-top: -1em;
+	font-weight: 800;
+	font-family: "Arvo", serif;
+}
 
+.front #block-nuss-block-frontpage-filters > form {
+	margin: 20px;
+}
+	
+.front #block-nuss-block-frontpage-filters .form-item > label {
+	display: none;
+}
+.front #block-nuss-block-frontpage-filters .form-item > button.edit-submit--2 {
+	font-size: 30px;
+}
 
+.front #block-nuss-block-frontpage-filters .form-control {
+	font-size: 16px;
+}
+/* ----------------------------------- top vacancies ------------------------ */
 
+.front .row .region {
+	margin-top: 150px;
+	
+}
+.front .row .region #block-views-vacancies-block-1 {
+	border: 1px solid #9bd078;
+	padding: 0 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-.not-front .main-container {
+.front .row .region #block-views-vacancies-block-1 > h2 {
+	font-family: 'Arvo', serif;
+	color: #40920a;
+	text-transform: uppercase;
+	font-size: 34px;
+	font-weight: 800;
+	margin-top: -0.6em;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
 	background-color: white;
 }
+
+.front .row .region #block-views-vacancies-block-1 .row .col .views-field-title .field-content > a {
+	color: #804100;
+	font-family: "Arvo", sefir;
+	font-size: 24px;
+	font-weight: 800;	
+}
+
+.front .row .region #block-views-vacancies-block-1 .row .col .field-content > a {
+	color: #40920a;
+}
+
+.front .row .region #block-views-vacancies-block-1 .more-link {
+	font-family: 'Arvo', serif;
+	font-size: 20px;
+	font-weight: 800;
+	background-color: white;
+	padding: 0 5px;
+	float: right;
+	margin-bottom: -0.6em;
+}
+
+
+.front .row .region #block-views-vacancies-block-1 .more-link > a {
+	color: #40920a;
+}
+
+.front .row .view-vacancies .row:nth-child(n+2) .col:before {
+	content: "_________";
+	color: #ccc;
+}
+
+.front .row .view-vacancies .row:nth-child(n+2) .views-field-title {
+	margin-top: 15px;
+}
+
+/* --------------------------- top vacancies pagination ----------------------- */
+.front .text-center .pagination {
+	margin-bottom: -2.3em;
+}
+
+.front .text-center .pagination >  .active > span {
+	background-color: #9bd078;
+	border-color: #9bd078;
+}
+
+.front .text-center .pagination > li > a {
+	color: #9bd078;
+	border: 1px solid #9bd078;
+}
+
+/* =================================== footer ================================= */
+
+.footer {
+	background-color: #9bd078;
+	color: white;
+	margin-top: 50px;
+	padding-top: 0;
+}
+.footer .panel-panel {
+	padding-left: 22px;
+	padding-right: 22px;
+}
+
+.footer .panel-panel .inside {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.footer .panel-panel:before {
+    height: 3px;
+    display: block;
+    width: 50px;
+    background: white;
+    margin-top: 2px;
+    content: '';
+	padding-left: 15px;
+}
+
+.footer .pane-block > h2,
+.footer .pane-custom > h2 {
+	font-family: 'Arvo', serif;
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+}
+
+.footer .pane-block .field-content > a {
+	color: white;
+}
+
+
+.footer #mini-panel-footer_panel {
+	padding-bottom: 10px;
+}
+
+#block-copyright-block-copyright-block {
+	border-top: 1px solid white;
+	padding-top: 15px;
+	font-family: 'Arvo', serif;
+	font-size: 16px;
+}
+
+
+/* =========================== vacancies =========================== */
+
+.page-vacancies .row {
+	border: 1px solid #9bd078;
+}
+
+/* --------------------------- left side --------------------------- */
+.page-vacancies .col-sm-3 {
+	width: 33%;
+	background-color: rgb(155, 208, 120);
+}
+
+.page-vacancies .col-sm-3 .views-exposed-widgets .views-exposed-widget {
+	float: none;
+}
+
+.page-vacancies .col-sm-3 .clear-filters {
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+.page-vacancies .col-sm-3 .clear-filters > a {
+	color: #333;
+	font-weight: 800;
+	text-decoration: none;
+}
+
+.page-vacancies .col-sm-3 .clear-filters > a:before {
+	margin-right: 0.5em;
+	color: white;
+	font-family: FontAwesome;
+	content: "\f00d";
+}
+
+.page-vacancies .col-sm-3 .views-exposed-widget {
+	border-top: 1px solid white;
+	padding-right: 0;
+}
+
+.page-vacancies .row .region-sidebar-first .views-widget-filter-field_location_value > label, 
+.page-vacancies .row .region-sidebar-first .views-widget-filter-field_category_tid > label {	
+	font-family: "Arvo", serif;
+	font-size: 22px;
+	font-weight: 800;
+	margin-left: 1em;
+}
+.page-vacancies .row .region-sidebar-first .form-item .form-type-bef-checkbox > input[type="checkbox"] {
+	visibility: hidden;
+}
+
+.page-vacancies .row .region-sidebar-first .form-item .form-type-bef-checkbox > input[type="checkbox"]:checked:before {
+	color: white;
+	font-family: FontAwesome;
+	content: "\f00c";
+	visibility: visible;
+}
+
+.page-vacancies .row .region-sidebar-first .form-item .form-type-bef-checkbox > label {
+	margin-left: 0.5em;
+	cursor: pointer;
+}
+
+.page-vacancies .row .region-sidebar-first .views-submit-button {
+	display: none;
+}
+
+/*--------------------------------- right side ------------------------------------------*/
+
+.page-vacancies .col-sm-9 {
+	width: 67%;
+}
+
+.page-vacancies .row > section > h1 {
+	margin-left: -8em;
+}
+
+.page-vacancies .view-content {
+	font-size: 16px;
+}
+
+.page-vacancies .view-content .views-field-field-company-logo {
+	display: inline-block;
+	vertical-align: top;
+	width: 10%;
+}
+.page-vacancies .view-content .views-field-field-location {
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+}
+
+.page-vacancies .view-content .views-field-field-location .field-content > a.job-title {
+	color: #804100;
+	font-family: "Arvo", sefir;
+	font-size: 20px;
+	font-weight: 800;	
+}
+
+.page-vacancies .view-content .views-field-field-category {
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+}
+
+.page-vacancies .view-content .views-field-field-category .field-content > a.read-more-link {	
+	font-weight: 800;
+}
+
+.page-vacancies .view-content .views-field-field-category .field-content > a.read-more-link:hover {	
+	color: #804100;
+}
+.page-vacancies .view-content .views-field-field-category .field-content > a.read-more-link:after {	
+	font-family: FontAwesome;
+	margin-left: 0.3em;
+	font-size: 0.8em;
+	content: "\f0da";
+}
+.page-vacancies .col-sm-9 .view-content .views-row:not(.views-row-last) {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+
+/* ----------------------- pagination --------------------------- */
+.page-vacancies .text-center .pagination {
+	float: right;
+	margin-bottom: -1em;
+}
+
+.page-vacancies .text-center .pagination >  .active > span {
+	background-color: #9bd078;
+	border-color: #9bd078;
+}
+
+.page-vacancies .text-center .pagination > li > a {
+	color: #9bd078;
+	border: 1px solid #9bd078;
+}
+
+
+/* =========================== Companies =============================== */
+
+
+
+
+
+
+
+
+
+
+/* ========================== Contact us ================================ */
+
+.page-node-51 .main-container {
+	border: 1px solid #9bd078;
+	color: #333;
+}
+
+.page-node-51 .form-actions {
+	margin-bottom: 15px;
+}
+
+.page-node-51 .col-sm-12 .tabs--primary {
+	display: none;
+}
+
+.page-node-51 .col-sm-12 .region > section > article > header {
+	display: none;
+}
+
+.page-node-51 .node-webform .form-item .form-control {
+	border-color: #9bd078;
+}
+
+.page-node-51 .node-webform .form-item .resizable-textarea .grippie {
+	background-color: rgba(155, 208, 120, 0.5);
+}
+
+
+/* ========================== Misc ============================= */
+
+.page-user .col-sm-12 {
+	border: 1px solid #9bd078;
+}
+
+.page-user .nav-tabs {
+	border-bottom: 2px solid #9bd078;
+}
+
+.page-user .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	background-color: #9bd078;
+	color: white;
+}
+
+.page-user .form-control,
+.page-user .resizable-textarea .cke_chrome {
+	border-color: #9bd078;
+}
+
+.page-user .resizable-textarea .cke_chrome .cke_inner .cke_top,
+.page-user .resizable-textarea .cke_chrome .cke_inner .cke_bottom {
+	background-color: rgba(155, 208, 120, 0.5);
+}
+
+.page-user .resizable-textarea .cke_chrome .cke_inner .cke_bottom .cke_resizer {
+	border-right-color: darkgreen;
+}
+
+.page-user:not(.page-user-register) .main-container {
+	margin-bottom: 300px;
+}
+
+.page-user .form-actions > button {
+	margin-bottom: 15px;
+}
+
+.page-user .form-actions .glyphicon-log-in {
+	display: none;
+}
+
+.page-user .main-container {
+	background-color: rgba(255, 255, 255, 0.95);
+}
+
+.page-user .main-container .filter-wrapper,
+.page-user .main-container .help-block {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+/* ============================= entity form for vacancy ==================== */
+
+.logged-in.page-eform-submit-entityform-to-vacancy .field-name-field-company-logo {
+	display: none;
+}
+
+.page-eform-submit-entityform-to-vacancy .text-format-wrapper > fieldset,
+.page-eform-submit-entityform-to-vacancy .help-block {
+	display: none;
+}
+
+.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+1) {
+	float: left;
+	clear: left;
+	width: 33%;
+}
+.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+2) {
+	float: left;
+	width: 33%;
+}
+
+.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+3) {
+	float: right;
+	clear: right;
+	width: 33%;
+}
+.form-radios .radio {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-title {
+	display:inline-block;
+	width: 75%;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date {
+	display:inline-block;
+	width: 25%;
+	float: right;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper > fieldset {
+	border: none;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper > fieldset > legend {
+	padding: 0;
+	border: 0;
+	background: none;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: -1px;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper .panel-body {
+	padding: 0;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper .panel-body .date-no-float .form-item-field-expiration-date-und-0-value {
+	margin-bottom: 0;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper .panel-body .date-padding {
+	padding: 0;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper .panel-body .date-padding .form-item-field-expiration-date-und-0-value-date > label {
+	display: none;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-location {
+	display: inline-block;
+	width: 33%;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-salary {
+	display: inline-block;
+	width: 33%;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-experience {
+	display: inline-block;
+	width: 33%;
+}
+
+
 

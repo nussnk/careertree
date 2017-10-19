@@ -8,10 +8,10 @@ function subtheme_theme(&$existing, $type, $theme, $path) {
     'template' => 'templates/user_login_block',
     'render element' => 'form',
   );
-  $hooks['user_login'] = array(
+/*  $hooks['user_login'] = array(
     'template' => 'templates/user_login',
     'render element' => 'form',
-  );
+  );*/
   return $hooks;
 }
 
@@ -28,6 +28,7 @@ function subtheme_preprocess_user_login_block(&$variables) {
   $variables['rendered'] = drupal_render_children($variables['form']);
 }
 
+/*
 function subtheme_preprocess_user_login(&$variables) {
 
   $variables['form']['name']['#title'] = "";
@@ -40,7 +41,7 @@ function subtheme_preprocess_user_login(&$variables) {
 
   $variables['rendered'] = drupal_render_children($variables['form']);
 }
-
+*/
 
 
 
@@ -50,11 +51,11 @@ function subtheme_form_alter(&$form, &$form_state, $form_id) {
       $form['pass']['#weight'] = -2;
       $form['actions']['#weight'] = -1;
     }
-    if($form_id == 'user_login') {
+ /*   if($form_id == 'user_login') {
       $form['name']['#weight'] = -3;
       $form['pass']['#weight'] = -2;
       $form['actions']['#weight'] = -1;
-    }
+    }*/
 }
 
 function subtheme_menu_link(array $variables) {
