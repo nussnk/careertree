@@ -578,6 +578,9 @@ ol.breadcrumb {
 	display: none;
 }
 
+.page-eform-submit-entityform-to-vacancy  .row {
+	border: 1px solid #9bd078;
+}
 .page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+1) {
 	float: left;
 	clear: left;
@@ -600,58 +603,79 @@ ol.breadcrumb {
 
 .page-eform-submit-entityform-to-vacancy .field-name-field-title {
 	display:inline-block;
-	width: 75%;
+	width: 73%;
 }
 
 .page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date {
 	display:inline-block;
 	width: 25%;
 	float: right;
+	margin-right: 2px;
 }
 
-.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper > fieldset {
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date  .date-form-element-content {
 	border: none;
-}
-
-.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper > fieldset > legend {
-	padding: 0;
-	border: 0;
-	background: none;
-	font-weight: bold;
-	margin-bottom: 5px;
-	margin-top: -1px;
-}
-
-.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper .panel-body {
 	padding: 0;
 }
 
-.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper .panel-body .date-no-float .form-item-field-expiration-date-und-0-value {
-	margin-bottom: 0;
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date  .date-form-element-content .form-item-field-expiration-date-und-0-value {
+	width: 100%;
+	display: inline-block;
 }
 
-.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper .panel-body .date-padding {
-	padding: 0;
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date  .date-form-element-content .form-item-field-expiration-date-und-0-value .date-padding {
+	display: inline-block;
+	width: 100%;
+}	
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date  .date-form-element-content .form-item-field-expiration-date-und-0-value .date-padding .form-item-field-expiration-date-und-0-value-date {
+	display: inline-block;
+	width: 100%;	
 }
 
-.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date #field-expiration-date-add-more-wrapper .panel-body .date-padding .form-item-field-expiration-date-und-0-value-date > label {
-	display: none;
+.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date  .date-form-element-content .form-item-field-expiration-date-und-0-value .date-padding .form-item-field-expiration-date-und-0-value-date > input {
+	display: inline-block;
+	width: 100%;	
 }
-
 .page-eform-submit-entityform-to-vacancy .field-name-field-location {
 	display: inline-block;
-	width: 33%;
+	width: 32%;
+	margin-right: 16px;
 }
 
 .page-eform-submit-entityform-to-vacancy .field-name-field-salary {
 	display: inline-block;
-	width: 33%;
+	width: 32%;
+	margin-right: 16px;
 }
 
 .page-eform-submit-entityform-to-vacancy .field-name-field-experience {
 	display: inline-block;
-	width: 33%;
+	width: 32%;
+}
+
+.page-eform-submit-entityform-to-vacancy .field-name-field-description {
+	clear: both;
+	margin-top: 25px;
+	padding-top: 10px;
+}
+
+.page-eform-submit-entityform-to-vacancy .form-control {
+	border-color: #9bd078;
 }
 
 
+.page-eform-submit-entityform-to-vacancy .resizable-textarea .cke_chrome .cke_inner .cke_top,
+.page-eform-submit-entityform-to-vacancy .resizable-textarea .cke_chrome .cke_inner .cke_bottom {
+	background-color: rgba(155, 208, 120, 0.5);
+}
 
+.page-eform-submit-entityform-to-vacancy .resizable-textarea .cke_chrome .cke_inner .cke_bottom .cke_resizer {
+	border-right-color: darkgreen;
+}
+	
+.page-eform-submit-entityform-to-vacancy .form-actions > button {
+	margin-bottom: 15px;
+/*	margin-bottom: -1em;*/
+}	
