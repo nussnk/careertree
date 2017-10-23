@@ -27,8 +27,8 @@
   ?>
 <?php endif; ?>
 <div class="views-exposed-form">
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Show filter</button>
-  <div id="demo" class=" collapse views-exposed-widgets clearfix">
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+  <div id="demo" class="views-exposed-widgets clearfix">
     <div class="clear-filters"><a href="vacancies">Clear filters</a></div>
     <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">

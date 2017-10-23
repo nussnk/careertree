@@ -28,13 +28,20 @@ a, a:hover {
 }
 
 /* ======================= main css ===================== */
+html {
+	font-size: 16px;	
+}
+
+h2 {
+	font-size: 1.8em;
+}
 body{
 	font-family: "PT Sans", serif;
 	background: url(../img/main_bg.jpg);
 	background-position:center top;
 	background-repeat: no-repeat;
-	background-size: auto;
-	font-size: 16px;
+	background-size: auto 460px;
+	font-size: 1rem;
 }
 
 .not-front .main-container {
@@ -58,7 +65,7 @@ body{
 	box-shadow: 0 2px 4px 0 #3c850d;
 	text-shadow: 0 1px 0 white;
 	border-radius: 4px;
-	font-size: 16px;
+	font-size: 1em;
 }
 
 ol.breadcrumb {
@@ -93,6 +100,7 @@ ol.breadcrumb {
 	color: #804100;
 	font-weight: 600;
 	font-family: "Arvo", serif;
+	font-size: 0.8em;
 }
 
 .container-fluid.secondary .container .navbar-collapse > nav > ul > li > a:before {
@@ -127,18 +135,20 @@ ol.breadcrumb {
 	padding: 10px 15px;
 	color: white;
 	font-family: "Arvo", serif;
-	font-size: 16px;
+	font-size: 1em;
 }
 
 /* ========================= main content ======================= */
-.main-container {
-	margin-top: 190px;
+.front .main-container {
+	margin-top: 140px;
+}
+.not-front .main-container {
+	margin-top: 150px;
 }
 /* ------------------------- frontpage -------------------------- */
 
 .front #block-user-login {
 	background-color: rgba(155, 208, 120, 0.95);
-	float: left;
 	width: 40%;
 	display: inline-block;
 }
@@ -178,9 +188,9 @@ ol.breadcrumb {
 /*---------------------------------- exposed filters --------------------------- */
 .front.not-logged-in #block-nuss-block-frontpage-filters {
 	background-color: rgba(85, 186, 19, 0.95);
-	float: right;
 	width: 58%;
 	display: inline-block;
+	float: right;
 }
 
 .front.logged-in #block-nuss-block-frontpage-filters {
@@ -206,28 +216,28 @@ ol.breadcrumb {
 	display: none;
 }
 .front #block-nuss-block-frontpage-filters .form-item > button.edit-submit--2 {
-	font-size: 30px;
+/*	font-size: 30px;*/
 }
 
 .front #block-nuss-block-frontpage-filters .form-control {
-	font-size: 16px;
+	font-size: 1em;
 }
 /* ----------------------------------- top vacancies ------------------------ */
 
 .front .row .region {
-	margin-top: 150px;
-	
+
 }
 .front .row .region #block-views-vacancies-block-1 {
 	border: 1px solid #9bd078;
 	padding: 0 20px;
+	margin-top: 130px;
 }
 
 .front .row .region #block-views-vacancies-block-1 > h2 {
 	font-family: 'Arvo', serif;
 	color: #40920a;
 	text-transform: uppercase;
-	font-size: 34px;
+	font-size: 2.1em;
 	font-weight: 800;
 	margin-top: -0.6em;
 	display: inline-block;
@@ -239,7 +249,7 @@ ol.breadcrumb {
 .front .row .region #block-views-vacancies-block-1 .row .col .views-field-title .field-content > a {
 	color: #804100;
 	font-family: "Arvo", sefir;
-	font-size: 24px;
+	font-size: 1.5em;
 	font-weight: 800;	
 }
 
@@ -249,7 +259,7 @@ ol.breadcrumb {
 
 .front .row .region #block-views-vacancies-block-1 .more-link {
 	font-family: 'Arvo', serif;
-	font-size: 20px;
+	font-size: 1.25em;
 	font-weight: 800;
 	background-color: white;
 	padding: 0 5px;
@@ -274,6 +284,7 @@ ol.breadcrumb {
 /* --------------------------- top vacancies pagination ----------------------- */
 .front .text-center .pagination {
 	margin-bottom: -2.3em;
+	margin-right: 15px;
 }
 
 .front .text-center .pagination >  .active > span {
@@ -317,7 +328,7 @@ ol.breadcrumb {
 .footer .pane-block > h2,
 .footer .pane-custom > h2 {
 	font-family: 'Arvo', serif;
-	font-size: 16px;
+	font-size: 1em;
 	font-weight: 600;
 	color: white;
 }
@@ -335,7 +346,7 @@ ol.breadcrumb {
 	border-top: 1px solid white;
 	padding-top: 15px;
 	font-family: 'Arvo', serif;
-	font-size: 16px;
+	font-size: 1em;
 }
 
 
@@ -355,8 +366,16 @@ ol.breadcrumb {
 	float: none;
 }
 
+.page-vacancies .col-sm-3 .views-exposed-form > button {
+	display: none;
+}
+
+.page-vacancies .col-sm-3 .views-exposed-widgets.collapse {
+	display: block;
+}
+
 .page-vacancies .col-sm-3 .clear-filters {
-	font-size: 18px;
+	font-size: 1.1em;
 	margin: 10px 0;
 }
 
@@ -381,7 +400,7 @@ ol.breadcrumb {
 .page-vacancies .row .region-sidebar-first .views-widget-filter-field_location_value > label, 
 .page-vacancies .row .region-sidebar-first .views-widget-filter-field_category_tid > label {	
 	font-family: "Arvo", serif;
-	font-size: 22px;
+	font-size: 1.4em;
 	font-weight: 800;
 	margin-left: 1em;
 }
@@ -412,11 +431,16 @@ ol.breadcrumb {
 }
 
 .page-vacancies .row > section > h1 {
-	margin-left: -8em;
+	margin-left: -9em;
 }
 
+.page-vacancies .row .fake-header {
+	display: none;
+}
+
+
 .page-vacancies .view-content {
-	font-size: 16px;
+	font-size: 1em;
 }
 
 .page-vacancies .view-content .views-field-field-company-logo {
@@ -433,7 +457,7 @@ ol.breadcrumb {
 .page-vacancies .view-content .views-field-field-location .field-content > a.job-title {
 	color: #804100;
 	font-family: "Arvo", sefir;
-	font-size: 20px;
+	font-size: 1.25em;
 	font-weight: 800;	
 }
 
@@ -916,6 +940,13 @@ ol.breadcrumb {
 /* ================================================================================================== */
 
 @media (max-width: 768px) {
+	html {
+		font-size: 12px;
+	}
+	body {
+		background-size: auto 600px;
+
+	}
 	.front #block-user-login {
 		width: 100%;
 		margin-bottom: 40px;
@@ -926,6 +957,9 @@ ol.breadcrumb {
 	.front.not-logged-in #block-nuss-block-frontpage-filters {
 		width: 100%;  
 	}
+	.front .row .region #block-views-vacancies-block-1 {
+		margin-top: 240px;
+	}
 	.container-fluid.secondary .container .navbar-collapse > nav > ul > li > a {
 		padding: 5px 5px;
 	}
@@ -935,4 +969,69 @@ ol.breadcrumb {
 	.navbar-toggle {
 		margin: 5px 0 5px 10px;
 	}
+	.container-fluid.primary .container .navbar-collapse > nav > ul > li {
+		border-right: none;
+	}
+	.front .row .view-vacancies .row .views-field-title {
+		margin-top: 15px;
+	}
+	.front .row .view-vacancies .row .col:nth-child(n+2):before {
+		content: "_________";
+		color: #ccc;
+	}
+	.text-center {
+		text-align: left;
+	}
+	.my-form-wrapper > ul > li {
+		display: inline;
+		float: right;
+		padding: 10px;
+		font-size: 1.2em;
+	}
+	.my-form-wrapper > ul > li:nth-child(1) {
+		border-left: 1px solid #999;
+	}
+    .page-vacancies .col-sm-3 {
+		width: 100%;
+	}
+	.page-vacancies .col-sm-9 {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.page-vacancies .row .fake-header {
+		display: block;
+		font-family: 'Arvo', serif;
+		color: white;
+		margin-top: -1.4em;
+		margin-left: 10px;
+		text-transform: uppercase;
+		font-weight: 800;
+		border-bottom: none;		
+		font-size: 2em;
+	}
+	.page-vacancies .row > section > h1 {
+		display: none;
+	}
+
+	.page-vacancies .col-sm-3 .views-exposed-form > button {
+		color: #333;
+		background: none;
+		border: none;
+		padding: 10px;
+	}
+
+	.page-vacancies .col-sm-3 .views-exposed-form > button:before {
+		margin-right: 0.5em;
+		color: white;
+		font-family: FontAwesome;
+		content: "\f03a";
+	}
+	.page-vacancies .col-sm-3 .views-exposed-form > button {
+		display: block;
+	}
+
+	.page-vacancies .col-sm-3 .views-exposed-widgets.collapse:not(.in) {
+		display: none;
+	}
+
 }
