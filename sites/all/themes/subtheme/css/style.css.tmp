@@ -9,7 +9,8 @@
 }
 @media (min-width: 768px) {
   .container {
-   width: 750px;
+/*    width: 750px;*/
+    width: 970px;
   }
 }
 @media (min-width: 992px) {
@@ -138,9 +139,8 @@ ol.breadcrumb {
 
 .front #block-user-login {
 	background-color: rgba(155, 208, 120, 0.95);
-	float: left;
 	width: 40%;
-	display: inline-block;
+	float: left;
 }
 
 .front #block-user-login > h2{
@@ -178,9 +178,8 @@ ol.breadcrumb {
 /*---------------------------------- exposed filters --------------------------- */
 .front.not-logged-in #block-nuss-block-frontpage-filters {
 	background-color: rgba(85, 186, 19, 0.95);
+	width:58%;
 	float: right;
-	width: 58%;
-	display: inline-block;
 }
 
 .front.logged-in #block-nuss-block-frontpage-filters {
@@ -911,28 +910,4 @@ ol.breadcrumb {
 .page-companies .row .view-companies .thumbnail .views-field-field-company-description {
 	clear: left;
 }
-/* ================================================================================================== */
-/* ===================================== mobile version ============================================= */
-/* ================================================================================================== */
 
-@media (max-width: 768px) {
-	.front #block-user-login {
-		width: 100%;
-		margin-bottom: 40px;
-	}
-	.main-container {
-		margin-top: 100px;
-	}
-	.front.not-logged-in #block-nuss-block-frontpage-filters {
-		width: 100%;  
-	}
-	.container-fluid.secondary .container .navbar-collapse > nav > ul > li > a {
-		padding: 5px 5px;
-	}
-	.navbar-nav {
-		margin: 7.5px 0;
-	}
-	.navbar-toggle {
-		margin: 5px 0 5px 10px;
-	}
-}

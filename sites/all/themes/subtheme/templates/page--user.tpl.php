@@ -86,15 +86,8 @@
 		  <?php if (!empty($site_name)): ?>
 			<a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
 		  <?php endif; ?>
-		</div>
 
-		<?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-		  <div class="navbar-collapse">
-			<nav role="navigation">
-			  <?php if (!empty($secondary_nav)): ?>
-				<?php print render($secondary_nav); ?>
-			  <?php endif; ?>
-		  <?php if (!empty($primary_nav)): ?>
+		  <?php if (!empty($secondary_nav)): ?>
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 			  <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
 			  <span class="icon-bar"></span>
@@ -102,6 +95,14 @@
 			  <span class="icon-bar"></span>
 			</button>
 		  <?php endif; ?>
+		</div>
+
+		<?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+		  <div class="navbar-collapse collapse" id="navbar-collapse">
+			<nav role="navigation">
+			  <?php if (!empty($secondary_nav)): ?>
+				<?php print render($secondary_nav); ?>
+			  <?php endif; ?>
 			</nav>
 		  </div>
 		<?php endif; ?>
@@ -110,7 +111,7 @@
   <div class="container-fluid primary">
 	<div class="container">
 		<?php if (!empty($primary_nav)): ?>
-		  <div class="navbar-collapse collapse" id="navbar-collapse">
+		  <div class="navbar-collapse">
 			<nav role="navigation">
 			  <?php if (!empty($primary_nav)): ?>
 				<?php print render($primary_nav); ?>
@@ -124,6 +125,7 @@
 </header>
 
 <div class="main-container container">
+
   <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>
       <p class="lead"><?php print $site_slogan; ?></p>
@@ -146,6 +148,10 @@
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
+      <?php if ($logged_in): ?>
+        <?php //$title = $page['content']['system_main']['field_company_name']['#object']->field_company_name['und'][0]['value'];?>
+      <?php endif; ?>
+
       <?php if (!empty($title)): ?>
         <h1 class="page-header"><?php print $title; ?></h1>
       <?php endif; ?>
@@ -160,6 +166,7 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+      <?php //dpm($page['content']); ?>
       <?php print render($page['content']); ?>
     </section>
 
