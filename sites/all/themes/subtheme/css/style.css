@@ -33,7 +33,7 @@ html {
 }
 
 h2 {
-	font-size: 1.8em;
+	font-size: 1.7em;
 }
 body{
 	font-family: "PT Sans", serif;
@@ -50,6 +50,7 @@ body{
 
 .row > section > h1 {
 	font-family: 'Arvo', serif;
+	font-size: 2.25em;
 	color: white;
 	margin-top: -1.3em;
 	text-transform: uppercase;
@@ -58,7 +59,7 @@ body{
 }
 
 
-.button, .btn-primary, .form-submit{
+.button, .btn-primary, .form-submit, .input-group-btn{
 	color: #333333;
 	font-weight: 800;
 	background: linear-gradient(to bottom, white, #9bd078);
@@ -493,7 +494,6 @@ ol.breadcrumb {
 }
 /* ----------------------- pagination --------------------------- */
 .page-vacancies .text-center .pagination {
-	float: right;
 	margin-bottom: -1em;
 }
 
@@ -625,22 +625,16 @@ ol.breadcrumb {
 	font-weight: 800;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.page-user .region fieldset#edit-picture {
+	display: none;
+}
 
 /* ============================= entity form for vacancy ==================== */
 
-.logged-in.page-eform-submit-entityform-to-vacancy .field-name-field-company-logo {
+.logged-in.page-eform-submit-entityform-to-vacancy .field-name-field-company-logo,
+.logged-in.page-eform-submit-entityform-to-vacancy .field-name-field-company-name,
+.logged-in.page-eform-submit-entityform-to-vacancy .field-name-field-company-description,
+.logged-in.page-eform-submit-entityform-to-vacancy .field-name-field-contact-details {
 	display: none;
 }
 
@@ -854,6 +848,10 @@ ol.breadcrumb {
 
 
 /* ======================================== company page ========================== */
+.page-company .row > section > h1 {
+	margin-bottom: 10px;
+}
+
 .page-company .row {
 	border: 1px solid #9bd078;
 }
@@ -887,6 +885,11 @@ ol.breadcrumb {
 	margin-top: 15px;
 	margin-bottom: 20px;
 }
+
+.page-company .row .view-companies .views-field-field-company-name .field-content {
+	margin-top: 0;
+}
+
 .page-company .block-views > h2 {
 	margin-bottom: 20px;
 	color: #804100;
@@ -943,22 +946,32 @@ ol.breadcrumb {
 	html {
 		font-size: 12px;
 	}
-	body {
-		background-size: auto 600px;
+	body.not-logged-in {
+		background-size: auto 520px;
+
+	}
+	body.logged-in {
+		background-size: auto 320px;
 
 	}
 	.front #block-user-login {
 		width: 100%;
 		margin-bottom: 40px;
 	}
-	.main-container {
-		margin-top: 100px;
+	.front .main-container {
+		margin-top: 40px;
+	}
+	.not-front .main-container	{
+		margin-top: 40px;
 	}
 	.front.not-logged-in #block-nuss-block-frontpage-filters {
 		width: 100%;  
 	}
-	.front .row .region #block-views-vacancies-block-1 {
+	.front.not-logged-in .row .region #block-views-vacancies-block-1 {
 		margin-top: 240px;
+	}
+	.front.logged-in .row .region #block-views-vacancies-block-1 {
+		margin-top: 80px;
 	}
 	.container-fluid.secondary .container .navbar-collapse > nav > ul > li > a {
 		padding: 5px 5px;
@@ -969,6 +982,10 @@ ol.breadcrumb {
 	.navbar-toggle {
 		margin: 5px 0 5px 10px;
 	}
+	.container-fluid.secondary .container .navbar-collapse {
+		padding-right: 5px;
+	}
+	
 	.container-fluid.primary .container .navbar-collapse > nav > ul > li {
 		border-right: none;
 	}
@@ -979,19 +996,23 @@ ol.breadcrumb {
 		content: "_________";
 		color: #ccc;
 	}
-	.text-center {
+/*	.text-center {
 		text-align: left;
-	}
+	}*/
 	.my-form-wrapper > ul > li {
 		display: inline;
 		float: right;
 		padding: 10px;
-		font-size: 1.2em;
+		font-size: 0.9em;
 	}
 	.my-form-wrapper > ul > li:nth-child(1) {
 		border-left: 1px solid #999;
+		padding-right: 0;
 	}
-    .page-vacancies .col-sm-3 {
+	.my-form-wrapper > ul > li:nth-child(2) {
+		padding-left: 0;
+	}
+	.page-vacancies .col-sm-3 {
 		width: 100%;
 	}
 	.page-vacancies .col-sm-9 {
@@ -1033,5 +1054,43 @@ ol.breadcrumb {
 	.page-vacancies .col-sm-3 .views-exposed-widgets.collapse:not(.in) {
 		display: none;
 	}
+	.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+1),
+	.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+2),
+	.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+3) {
+		float: none;
+		clear: both;
+		width: 100%;
+	}
+	.page-eform-submit-entityform-to-vacancy .field-name-field-title,
+	.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date,
+	.page-eform-submit-entityform-to-vacancy .field-name-field-location,
+	.page-eform-submit-entityform-to-vacancy .field-name-field-salary,
+	.page-eform-submit-entityform-to-vacancy .field-name-field-experience {
+		width: 100%;
+	}
+	.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date,
+	.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date .date-no-float,
+	.page-eform-submit-entityform-to-vacancy .field-name-field-expiration-date .date-no-float .container-inline-date .form-item {
+		margin-right: 0;
+		width: 100%;
+	}
+	.front.logged-in #block-nuss-block-frontpage-filters {
+		width: 100%;
+	}
+	.container-fluid.secondary .navbar-header > a:before {
+		margin-left: -1em;
+		font-family: FontAwesome;
+		content: url(../img/small_logo.png);	
+	}
+	.container-fluid.secondary .navbar-header > a > img {
+		display: none;
+	}
+	.container-fluid.secondary .container .navbar-collapse > nav > ul > li > a {
+	text-transform: capitalize;
+	color: #804100;
+	font-weight: 600;
+	font-family: "Arvo", serif;
+	font-size: 0.8em;
+}
 
 }
