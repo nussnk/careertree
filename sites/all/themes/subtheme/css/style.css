@@ -73,6 +73,10 @@ ol.breadcrumb {
 	display: none;
 }
 
+.cke_path {
+	display: none;
+}
+
 /* ======================= nav bar ====================== */
 
 .navbar {
@@ -597,6 +601,11 @@ ol.breadcrumb {
 	display: none;
 }
 
+.page-user-14 .profile > h3,
+.page-user-14 .profile > dl {
+	display: none;
+}
+
 /* ----------------------------- self profie ------------------------------- */
 .page-user .profile .field-name-field-company-logo {
 	float: right;	
@@ -1090,7 +1099,7 @@ ol.breadcrumb {
 	color: #804100;
 	font-weight: 600;
 	font-family: "Arvo", serif;
-	font-size: 0.8em;
+	font-size: 0.7em;
 }
 
 }
