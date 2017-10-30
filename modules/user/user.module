@@ -2782,8 +2782,11 @@ password: Your password
       case 'register_pending_approval_body':
         $text = t("[user:name],
 
-Thank you for registering at [site:name]. Your application for an account is currently pending approval. Once it has been approved, you will receive another e-mail containing information about how to log in, set your password, and other details.
+Great!
 
+Thank you for applying for new account with CareerTree Cyprus.
+
+As soon as your application is review and accepted, you will receive our confirmation e-mail with the account details. 
 
 --  [site:name] team", array(), array('langcode' => $langcode));
         break;
@@ -3959,7 +3962,7 @@ function user_register_submit($form, &$form_state) {
   // Administrator approval required.
   else {
     _user_mail_notify('register_pending_approval', $account);
-    drupal_set_message(t('Thank you for applying for an account. Your account is currently pending approval by the site administrator.<br />In the meantime, a welcome message with further instructions has been sent to your e-mail address.'));
+    drupal_set_message(t('Great!<br />Thank you for applying for new account with CareerTree Cyprus.<br />As soon as your application is review and accepted, you will receive our confirmation e-mail with the account details.'));
     $form_state['redirect'] = '';
   }
 }

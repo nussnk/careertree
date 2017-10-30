@@ -83,3 +83,9 @@ function subtheme_menu_link(array $variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $image . $output . $sub_menu . "</li>\n";
 }
 
+function subtheme_preprocess_html (&$vars) {
+  if (drupal_is_front_page()) {
+    $vars['head_title'] = 'CareerTree Cyprus: Job in Cyprus';
+  }
+}
+

@@ -44,6 +44,18 @@ body{
 	font-size: 1rem;
 }
 
+body:before {
+	content: '';
+	background: rgba(0,0,0,0.35);
+	width: 100%;
+	height: 460px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+
+}
+
 .not-front .main-container {
 	background-color: white;
 }
@@ -342,6 +354,9 @@ ol.breadcrumb {
 	color: white;
 }
 
+.footer .panel-panel .pane-content > p > a {
+	color: white;
+}
 
 .footer #mini-panel-footer_panel {
 	padding-bottom: 10px;
@@ -550,6 +565,15 @@ ol.breadcrumb {
 	background-color: rgba(155, 208, 120, 0.5);
 }
 
+.page-node-51 span.thank-you {
+	font-size: 2em;
+	font-weight: 800;
+}
+
+.page-node-51 p.reply {
+	margin-top: 15px;
+}
+
 
 /* ========================== Misc ============================= */
 
@@ -604,6 +628,10 @@ ol.breadcrumb {
 .page-user-14 .profile > h3,
 .page-user-14 .profile > dl {
 	display: none;
+}
+
+.front .row .alert-success {
+	margin-bottom: 50px;
 }
 
 /* ----------------------------- self profie ------------------------------- */
@@ -754,6 +782,13 @@ ol.breadcrumb {
 /*	margin-bottom: -1em;*/
 }	
 
+.page-eform-entityform-to-vacancy-confirm .row .submission-text > p {
+    margin-bottom: 15px;
+}
+
+.page-eform-entityform-to-vacancy-confirm .footer {
+    margin-top: 400px;
+}
 
 /* ================================ vacancy ============================= */
 .node-type-vacancy .row {
@@ -817,7 +852,7 @@ ol.breadcrumb {
 .my-right-wrapper .field-name-field-description .field-label,
 .my-right-wrapper .field-name-field-main-responsibilities .field-label,
 .my-right-wrapper .field-name-field-main-requirements .field-label,
-.my-right-wrapper .field-name-field-social-guaranties .field-label {
+.my-right-wrapper .field-name-field-social-guarantees .field-label {
 	font-family: 'Arvo', serif;
 	font-weight: 800;
 	font-size: 1.2em;
@@ -861,7 +896,7 @@ ol.breadcrumb {
 	margin-bottom: 10px;
 }
 
-.page-company .row {
+.page-company .container .row {
 	border: 1px solid #9bd078;
 }
 
@@ -901,13 +936,32 @@ ol.breadcrumb {
 
 .page-company .block-views > h2 {
 	margin-bottom: 20px;
-	color: #804100;
+	color: #40920a;
 	font-weight: 800;
 }
-.page-company .row .view-vacancies .views-field {
-	margin-bottom: 10px;
+.page-company .view-vacancies .row  {
+	border: none;
 }
 
+.page-company .row .view-vacancies .row:nth-child(n+2) .col:before {
+    content: "_________";
+    color: #ccc;	
+}
+
+.page-company .row .view-vacancies .row:nth-child(n+2) .views-field-title {
+    margin-top: 15px;
+}
+
+.page-company .row .view-vacancies .col .views-field-title .field-content > a {
+	color: #804100;
+	font-family: "Arvo", sefir;
+	font-size: 1.2em;
+	font-weight: 800;	
+}
+
+.page-company #block-views-vacancies-block-4 {
+	margin-bottom: 15px;
+}
 /* ================ companies page ============================== */
 
 .page-companies .col-sm-12 {
@@ -947,6 +1001,19 @@ ol.breadcrumb {
 .page-companies .row .view-companies .thumbnail .views-field-field-company-description {
 	clear: left;
 }
+
+/* ======================================= about us ================================================= */
+.page-node-264 .main-container .row {
+	border: 1px solid #9bd078;
+}
+
+.page-node-264 .main-container .col-sm-12 {
+	margin-bottom: 15px;
+}
+
+.page-node-264 .footer {
+	margin-top: 150px;
+}
 /* ================================================================================================== */
 /* ===================================== mobile version ============================================= */
 /* ================================================================================================== */
@@ -957,12 +1024,19 @@ ol.breadcrumb {
 	}
 	body.not-logged-in {
 		background-size: auto 520px;
-
 	}
+	body.not-logged-in:before {
+		height: 520px;
+	}	
+	
 	body.logged-in {
 		background-size: auto 320px;
-
 	}
+	body.logged-in:before {
+		height: 320px;
+	}	
+	
+	
 	.front #block-user-login {
 		width: 100%;
 		margin-bottom: 40px;
@@ -997,9 +1071,6 @@ ol.breadcrumb {
 	
 	.container-fluid.primary .container .navbar-collapse > nav > ul > li {
 		border-right: none;
-	}
-	.front .row .view-vacancies .row .views-field-title {
-		margin-top: 15px;
 	}
 	.front .row .view-vacancies .row .col:nth-child(n+2):before {
 		content: "_________";
@@ -1100,6 +1171,16 @@ ol.breadcrumb {
 	font-weight: 600;
 	font-family: "Arvo", serif;
 	font-size: 0.7em;
+	}
+	.page-company .row .view-vacancies .row .col:nth-child(n+2):before {
+		content: "_________";
+		color: #ccc;
+	}
+	.page-company .row .view-vacancies .row .views-field-title {
+		margin-top: 15px;
+	}
+	.page-company .block-views > h2 {
+		margin-bottom: 5px;
 	}
 }
 

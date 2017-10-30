@@ -147,10 +147,18 @@
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
-      <?php if ($logged_in): ?>
+      <?php if (!$logged_in): ?>
         <?php //$title = $page['content']['system_main']['field_company_name']['#object']->field_company_name['und'][0]['value'];?>
       <?php endif; ?>
-
+	<?php if (current_path() == "user/register"): ?>
+	<?php $title = "REGISTER AS EMPLOYER";?>
+	<?php endif; ?>
+	<?php if (current_path() == "user"): ?>
+	<?php $title = "LOGIN";?>
+	<?php endif; ?>
+	<?php if (current_path() == "user/password"): ?>
+	<?php $title = "REQUEST NEW PASSWORD";?>
+	<?php endif; ?>
       <?php if (!empty($title)): ?>
         <h1 class="page-header"><?php print $title; ?></h1>
       <?php endif; ?>
@@ -165,7 +173,6 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php //dpm($page['content']); ?>
       <?php print render($page['content']); ?>
     </section>
 
