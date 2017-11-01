@@ -802,6 +802,12 @@ ol.breadcrumb {
     margin-top: 400px;
 }
 
+.page-eform-entityform-to-vacancy-confirm .note,
+.page-eform-entityform-to-vacancy-confirm .terms {
+	display: none;
+}
+
+
 /* ================================ vacancy ============================= */
 .node-type-vacancy .row {
 	border: 1px solid #9bd078;
@@ -1079,6 +1085,7 @@ ol.breadcrumb {
 	text-align: center;
 	margin: 20px;
 }
+
 /* ================================================================================================== */
 /* ===================================== mobile version ============================================= */
 /* ================================================================================================== */
