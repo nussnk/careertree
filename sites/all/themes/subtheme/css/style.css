@@ -634,6 +634,18 @@ ol.breadcrumb {
 	margin-bottom: 50px;
 }
 
+.terms {
+	font-size: 0.9em;
+	margin-bottom: 15px;
+}
+
+.note {
+	font-size: 0.8em;
+	margin-bottom: 15px;	
+	float: right;
+	margin-top: -3em;
+}
+
 /* ----------------------------- self profie ------------------------------- */
 .page-user .profile .field-name-field-company-logo {
 	float: right;	
@@ -1014,6 +1026,59 @@ ol.breadcrumb {
 .page-node-264 .footer {
 	margin-top: 150px;
 }
+
+.about-us {
+	width: 80%;
+	margin: auto;
+	margin-top: 50px;
+}
+.title-part {
+	font-size: 1.5em;
+	border: 1px solid #9bd078;
+	text-align: center;
+	padding: 20px 60px 30px 60px;
+}
+
+.title-part > img {
+	width: 80px;
+	height: 80px;
+	position: center;
+	border-radius: 80px;
+	display: block;
+	margin: auto;
+	margin-top: -55px;
+}
+
+.body-part {
+	width:90%;
+	margin: 15px auto;
+	column-count: 3;
+}
+
+.title2-part {
+	width:90%;
+	margin: auto;
+	font-family: "Arvo", serif;
+	color: #55ba13;
+	font-size: 3em;	
+	font-weight: 800;
+}
+
+.body2-part {
+	width:90%;
+	margin: 15px auto;
+}
+
+.footer-part {
+	width:90%;
+	margin: auto;
+	font-family: "Arvo", serif;
+	color: #55ba13;
+	font-size: 1.2em;
+	font-weight: 800;
+	text-align: center;
+	margin: 20px;
+}
 /* ================================================================================================== */
 /* ===================================== mobile version ============================================= */
 /* ================================================================================================== */
@@ -1181,6 +1246,9 @@ ol.breadcrumb {
 	}
 	.page-company .block-views > h2 {
 		margin-bottom: 5px;
+	}
+	.note {
+		margin-top: 10px;
 	}
 }
 
