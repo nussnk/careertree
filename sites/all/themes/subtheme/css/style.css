@@ -1043,6 +1043,7 @@ ol.breadcrumb {
 	border: 1px solid #9bd078;
 	text-align: center;
 	padding: 20px 60px 30px 60px;
+	margin-bottom: 25px; 
 }
 
 .title-part > img {
