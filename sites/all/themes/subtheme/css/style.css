@@ -380,6 +380,7 @@ ol.breadcrumb {
 .page-vacancies .col-sm-3 {
 	width: 33%;
 	background-color: rgb(155, 208, 120);
+	padding-right: 10px;
 }
 
 .page-vacancies .col-sm-3 .views-exposed-widgets .views-exposed-widget {
