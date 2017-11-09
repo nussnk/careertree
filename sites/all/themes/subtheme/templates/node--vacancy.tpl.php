@@ -106,10 +106,10 @@
     $content['field_location']['#prefix'] = '<div class="my-second-wrapper"><div class="my-title">Main info</div><span class="my-post-date">Post date: </span>'.$my_post_date;
     $content['field_contact_details']['#suffix'] = '</div></div>';
     $content['field_description']['#prefix'] = '<div class="my-right-wrapper">';
-    $content['field_social_guarantees']['#suffix'] = '</div></div>';
 //    dpm($content);
     print render($content);
   ?>
+</div></div>
   <?php
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);

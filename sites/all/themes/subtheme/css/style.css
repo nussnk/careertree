@@ -631,6 +631,11 @@ ol.breadcrumb {
 	display: none;
 }
 
+.page-user-33 .profile > h3,
+.page-user-33 .profile > dl {
+	display: none;
+}
+
 .front .row .alert-success {
 	margin-bottom: 50px;
 }
@@ -814,6 +819,12 @@ ol.breadcrumb {
 	border: 1px solid #9bd078;
 	padding-bottom: 15px;
 }
+
+.node-type-vacancy .field-item > a {
+	pointer-events: none;
+	color: #333;
+}
+
 .my-table {
 	display: table;
 }
@@ -1150,6 +1161,9 @@ ol.breadcrumb {
 		content: "_________";
 		color: #ccc;
 	}
+	.front .main-container .view-vacancies .views-field-title {
+		margin-top: 15px;
+	}
 /*	.text-center {
 		text-align: left;
 	}*/
@@ -1162,9 +1176,14 @@ ol.breadcrumb {
 	.my-form-wrapper > ul > li:nth-child(1) {
 		border-left: 1px solid #999;
 		padding-right: 0;
+		padding-left: 5px;
 	}
 	.my-form-wrapper > ul > li:nth-child(2) {
 		padding-left: 0;
+		padding-right: 5px;
+	}
+	.front #block-user-login .my-form-wrapper > ul {
+		margin-left: 40px;
 	}
 	.page-vacancies .col-sm-3 {
 		width: 100%;
@@ -1258,6 +1277,18 @@ ol.breadcrumb {
 	}
 	.note {
 		margin-top: 10px;
+	}
+	.body-part,
+	.body2-part {
+		width:100%;
+		margin-left: 0;
+		margin-right: 0;
+		column-count: 1;
+		text-align: justify;
+	}	
+	.node-type-vacancy .main-container .row > section > h1 {
+		color: #3c763d;
+		margin-top: 15px;
 	}
 }
 
