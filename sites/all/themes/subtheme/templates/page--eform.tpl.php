@@ -161,7 +161,10 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+	<div class="vac-add">
+	<div class="create-acc">Before submitting of new vacancy we advise to <a href="/careertree5.com/user/register">create your company account</a>.<br />This will help to store all your vacancies at a separate place and will make them easily accessible for potential candidates and yourselves.</div>
 	<div class="terms">Advertisement must be submitted in English or Greek.</div>
+	</div>
       <?php print render($page['content']); ?>
 	<div class="note">* The content of the announcement should not breach Laws of Republic of Cyprus and should not be offensive to other visitors of the portal.</div>
     </section>

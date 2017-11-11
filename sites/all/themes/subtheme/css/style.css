@@ -643,6 +643,20 @@ ol.breadcrumb {
 .terms {
 	font-size: 0.9em;
 	margin-bottom: 15px;
+	vertical-align: bottom;
+}
+
+.not-logged-in .create-acc {
+	float: right;
+	text-align: right;
+	width: 60%;
+	border: 1px solid #9bd078;
+	padding: 5px;
+	margin-bottom: 15px;
+}
+
+.logged-in .create-acc {
+	display: none;
 }
 
 .note {
@@ -1289,6 +1303,14 @@ ol.breadcrumb {
 	.node-type-vacancy .main-container .row > section > h1 {
 		color: #3c763d;
 		margin-top: 15px;
+	}
+	.not-logged-in .create-acc {
+		float: none;
+		text-align: left;
+		width: 100%;
+		border: 1px solid #9bd078;
+		padding: 5px;
+		margin-bottom: 15px;
 	}
 }
 
