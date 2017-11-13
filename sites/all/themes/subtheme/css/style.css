@@ -467,7 +467,7 @@ ol.breadcrumb {
 .page-vacancies .view-content .views-field-field-company-logo {
 	display: inline-block;
 	vertical-align: top;
-	width: 10%;
+	width: 18%;
 }
 .page-vacancies .view-content .views-field-field-location {
 	display: inline-block;
@@ -485,7 +485,7 @@ ol.breadcrumb {
 .page-vacancies .view-content .views-field-field-category {
 	display: inline-block;
 	vertical-align: top;
-	width: 40%;
+	width: 38%;
 }
 
 .page-vacancies .view-content .views-field-field-category .field-content > a.read-more-link {	
@@ -655,7 +655,8 @@ ol.breadcrumb {
 	margin-bottom: 15px;
 }
 
-.logged-in .create-acc {
+.logged-in .create-acc,
+.page-eform-entityform-to-vacancy-confirm .create-acc {
 	display: none;
 }
 
@@ -1241,6 +1242,21 @@ ol.breadcrumb {
 	.page-vacancies .col-sm-3 .views-exposed-widgets.collapse:not(.in) {
 		display: none;
 	}
+	
+	.page-vacancies .view-content .views-field-field-company-logo {
+		margin-right: 5px;	
+		width: 25%;
+	}
+
+	.page-vacancies .view-content .views-field-field-location {
+		width: 74%;
+	}
+
+	.page-vacancies .view-content .views-field-field-category {
+		margin-top: 10px;
+		width: 100%;
+	}
+
 	.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+1),
 	.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+2),
 	.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+3) {
