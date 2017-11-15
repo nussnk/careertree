@@ -1350,6 +1350,9 @@ ol.breadcrumb {
 		vertical-align: top;
 		padding-left: 0;
 	}
+	.my-first-wrapper .field-name-field-company-name {
+		margin-left: 0;
+	}
 }
 
 
