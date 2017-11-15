@@ -716,7 +716,12 @@ ol.breadcrumb {
 .page-eform-submit-entityform-to-vacancy  .row {
 	border: 1px solid #9bd078;
 }
-.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+1) {
+
+.page-eform-submit-entityform-to-vacancy #edit-field-category-und {
+	column-count: 3;
+}
+
+/*.page-eform-submit-entityform-to-vacancy .form-item-field-category-und .form-item:nth-child(3n+1) {
 	float: left;
 	clear: left;
 	width: 33%;
@@ -730,7 +735,7 @@ ol.breadcrumb {
 	float: right;
 	clear: right;
 	width: 33%;
-}
+}*/
 .form-radios .radio {
 	margin-top: 2px;
 	margin-bottom: 2px;
