@@ -429,11 +429,12 @@ ol.breadcrumb {
 	visibility: hidden;
 }
 
-.page-vacancies .row .region-sidebar-first .form-item .form-type-bef-checkbox > input[type="checkbox"]:checked:before {
+.page-vacancies .row .region-sidebar-first .form-item .form-type-bef-checkbox.highlight:before {
 	color: white;
 	font-family: FontAwesome;
 	content: "\f00c";
 	visibility: visible;
+	margin-right: -1em;
 }
 
 .page-vacancies .row .region-sidebar-first .form-item .form-type-bef-checkbox > label {
